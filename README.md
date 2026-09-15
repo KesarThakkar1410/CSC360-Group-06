@@ -4,8 +4,6 @@
 
 ## Project overview
 
-Overview
-
 This project demonstrates how to implement a splash screen in a JavaFX application using FXML. A splash screen is the loading window that appears briefly when an application starts, before the main interface becomes visible. It is commonly used to improve user experience by showing progress or branding while the application loads necessary resources in the background.
 
 In this project, the splash screen's visual layout is defined using FXML, which allows the interface design to be kept separate from the application's logic. This follows good coding practice by separating the UI (what the user sees) from the controller (how the app behaves). The FXML file defines elements such as images, text, or progress indicators shown on the splash screen, while a corresponding controller class manages the behavior, such as how long the splash screen is displayed and when the transition to the main application window occurs.
