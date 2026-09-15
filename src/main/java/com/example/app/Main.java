@@ -26,7 +26,7 @@ public class Main extends Application {
             @Override
             protected Void call() throws Exception {
                 for (int i = 1; i <= 10; i++) {
-                    Thread.sleep(200);
+                    Thread.sleep(600);
                     double progress = i / 10.0;
                     Platform.runLater(() -> splashController.setProgress(progress));
                 }
