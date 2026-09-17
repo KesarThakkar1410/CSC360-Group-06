@@ -18,6 +18,10 @@ public class Main extends Application {
         Parent splashRoot = splashLoader.load();
         SplashController splashController = splashLoader.getController();
 
+        String lastOpened = AppData.loadLastOpened();
+        splashController.setLastOpenedText("Last opened: " + lastOpened);
+        AppData.saveCurrentTime();
+
         Stage splashStage = new Stage(StageStyle.UNDECORATED);
         splashStage.setScene(new Scene(splashRoot));
         splashStage.show();

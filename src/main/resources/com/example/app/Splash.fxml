@@ -2,21 +2,32 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
 
 <StackPane xmlns="http://javafx.com/javafx"
            xmlns:fx="http://javafx.com/fxml"
            fx:controller="com.example.app.SplashController"
            prefWidth="400" prefHeight="300"
-           style="-fx-background-color: #FFC0CB;">
+           style="-fx-background-color: white;">
 
-    <VBox alignment="CENTER" spacing="15">
+        <VBox alignment="CENTER" spacing="15">
+        <Label text="CSC360" style="-fx-text-fill: black; -fx-font-size: 20px; -fx-font-weight: bold;"/>
         <ImageView fitWidth="100" fitHeight="100" preserveRatio="true">
             <image>
                 <Image url="@logo.jpg"/>
             </image>
         </ImageView>
-        <Label text="My Application" style="-fx-text-fill: white; -fx-font-size: 20px;"/>
-        <ProgressBar fx:id="progressBar" prefWidth="200"/>
+        <Label text="Welcome, @username !" style="-fx-text-fill: #e74c3e; -fx-font-size: 14px;"/>
+        <Label fx:id="lastOpenedLabel" text="" style="-fx-text-fill: gray; -fx-font-size: 12px;"/>
+        <ProgressBar fx:id="progressBar" prefWidth="200" prefHeight="20"
+                     style="-fx-accent: #e74c3c; -fx-background-radius: 10; -fx-border-radius: 10;"/>
     </VBox>
+
+    <Label text="Version 1.0" style="-fx-text-fill: black; -fx-font-size: 12px;"
+           StackPane.alignment="BOTTOM_CENTER">
+        <StackPane.margin>
+            <Insets bottom="10"/>
+        </StackPane.margin>
+    </Label>
 
 </StackPane>
