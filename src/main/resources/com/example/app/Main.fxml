@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
 
-<StackPane xmlns="http://javafx.com/javafx"
-           xmlns:fx="http://javafx.com/fxml"
-           fx:controller="com.example.app.MainController"
-           prefWidth="600" prefHeight="400">
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.app.MainController"
+      prefWidth="600" prefHeight="400"
+      alignment="CENTER" spacing="15">
+    <padding>
+        <Insets top="20" bottom="20" left="20" right="20"/>
+    </padding>
 
     <Label text="Welcome to the main application!" style="-fx-font-size: 18px;"/>
 
-</StackPane>
+    <TextArea fx:id="notesArea" prefWidth="500" prefHeight="200" wrapText="true"
+              promptText="Write something here..."/>
+
+    <Button text="Save" onAction="#handleSave"/>
+
+    <Label fx:id="statusLabel" text="" style="-fx-text-fill: green; -fx-font-size: 12px;"/>
+
+</VBox>
