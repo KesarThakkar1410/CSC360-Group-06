@@ -26,6 +26,23 @@ public class Main extends Application {
         splashStage.setScene(new Scene(splashRoot));
         splashStage.show();
 
+        splashController.setSkipAction(() -> {
+            try {
+                FXMLLoader mainLoader = new FXMLLoader(getClass().getResource("Main.fxml"));
+                Parent mainRoot = mainLoader.load();
+                MainController mainController = mainLoader.getController();
+                primaryStage.setOnCloseRequest(mainController::handleCloseRequest);
+
+                primaryStage.setScene(new Scene(mainRoot));
+                primaryStage.setTitle("My Application");
+                primaryStage.show();
+
+                splashStage.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
         Task<Void> loadingTask = new Task<>() {
             @Override
             protected Void call() throws Exception {
@@ -42,6 +59,8 @@ public class Main extends Application {
             try {
                 FXMLLoader mainLoader = new FXMLLoader(getClass().getResource("Main.fxml"));
                 Parent mainRoot = mainLoader.load();
+                MainController mainController = mainLoader.getController();
+                primaryStage.setOnCloseRequest(mainController::handleCloseRequest);
 
                 primaryStage.setScene(new Scene(mainRoot));
                 primaryStage.setTitle("My Application");
