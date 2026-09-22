@@ -12,8 +12,6 @@ public class SplashController {
     @FXML
     private Label lastOpenedLabel;
 
-    private Runnable skipAction;
-
     public void setProgress(double value) {
         progressBar.setProgress(value);
     }
@@ -22,14 +20,8 @@ public class SplashController {
         lastOpenedLabel.setText(text);
     }
 
-    public void setSkipAction(Runnable action) {
-        this.skipAction = action;
-    }
-
     @FXML
     private void handleSkip() {
-        if (skipAction != null) {
-            skipAction.run();
-        }
+        javafx.application.Platform.exit();
     }
 }
