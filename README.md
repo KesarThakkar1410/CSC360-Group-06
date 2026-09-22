@@ -1,13 +1,27 @@
-## CSC360 Group 6
+# CSC360 Group 6 (Splash Screen Project)
 
-## Write a Java FX program with a custom splash screen using FXML.
+**Project Assigned:** Write a Java FX program with a custom splash screen using FXML.
+
+*(A splash screen is a loading window that briefly appears when an application starts, before the main interface is shown.)*
+
+**Group Members**: Eti Brihaspati Patel, Sonam Dwivedi, Hemangi Makwana, and Kesar Thakkar
 
 ## Project overview
 
-This project demonstrates how to implement a splash screen in a JavaFX application using FXML. A splash screen is the loading window that appears briefly when an application starts, before the main interface becomes visible. It is commonly used to improve user experience by showing progress or branding while the application loads necessary resources in the background.
+A JavaFX application demonstrating a splash screen built using FXML. The splash screen shows a logo, real time loading status, and the last time the app was opened, before switching to the main application window. The main screen lets users write and save notes, with unsaved changes protection on exit.
 
-In this project, the splash screen's visual layout is defined using FXML, which allows the interface design to be kept separate from the application's logic. This follows good coding practice by separating the UI (what the user sees) from the controller (how the app behaves). The FXML file defines elements such as images, text, or progress indicators shown on the splash screen, while a corresponding controller class manages the behavior, such as how long the splash screen is displayed and when the transition to the main application window occurs.
+### Splash Screen Preview
+<img width="396" height="376" alt="splashscreen" src="https://github.com/user-attachments/assets/bf168fa3-ed2a-4e09-9e78-de003dc6a156" />
 
-Once the splash screen finishes displaying, the application automatically switches to the main window, allowing the user to begin using the app. This structure makes it easy to customize the splash screen's design or duration without changing the core application logic.
+### Main Screen Preview 
+<img width="594" height="418" alt="mainscreen" src="https://github.com/user-attachments/assets/673aba1d-7dac-41ab-8a06-b4bffe9b2c7b" />
 
-This project can serve as a helpful reference or starting template for developers who want to add a splash screen feature to their own JavaFX applications, especially those learning how to combine FXML based UI design with JavaFX's application lifecycle.
+## Features
+1. Splash screen made using FXML, separate from the app's logic
+2. Shows the logo, app name, version, and greeting on the splash screen
+3. Progress bar that shows loading messages like "Loading saved notes..."
+4. Shows the last time the app was opened
+5. Close button to exit the app while it's still loading
+6. Main screen has a text box to write notes
+7. Notes are saved and shown again next time you open the app
+8. Warns you if you try to close the app without saving your notes
