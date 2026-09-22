@@ -27,16 +27,33 @@ public class Main extends Application {
         splashStage.show();
 
         Task<Void> loadingTask = new Task<>() {
-            @Override
-            protected Void call() throws Exception {
-                for (int i = 1; i <= 10; i++) {
-                    Thread.sleep(600);
-                    double progress = i / 10.0;
-                    Platform.runLater(() -> splashController.setProgress(progress));
-                }
-                return null;
-            }
+    @Override
+    protected Void call() throws Exception {
+        String[] steps = {
+            "Checking last session...",
+            "Loading saved notes...",
+            "Preparing interface...",
+            "Almost done..."
         };
+
+        for (int i = 1; i <= 10; i++) {
+            Thread.sleep(600);
+            double progress = i / 10.0;
+
+            String currentStatus;
+            if (i <= 3) currentStatus = steps[0];
+            else if (i <= 6) currentStatus = steps[1];
+            else if (i <= 9) currentStatus = steps[2];
+            else currentStatus = steps[3];
+
+            Platform.runLater(() -> {
+                splashController.setProgress(progress);
+                splashController.setStatusText(currentStatus);
+            });
+        }
+        return null;
+    }
+};
 
         loadingTask.setOnSucceeded(event -> {
             try {

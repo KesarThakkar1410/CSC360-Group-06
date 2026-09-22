@@ -12,12 +12,19 @@ public class SplashController {
     @FXML
     private Label lastOpenedLabel;
 
+    @FXML
+    private Label statusLabel;
+
     public void setProgress(double value) {
         progressBar.setProgress(value);
     }
 
     public void setLastOpenedText(String text) {
         lastOpenedLabel.setText(text);
+    }
+
+    public void setStatusText(String text) {
+        statusLabel.setText(text);
     }
 
     @FXML
