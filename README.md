@@ -4,7 +4,10 @@
 
 *(A splash screen is a loading window that briefly appears when an application starts, before the main interface is shown.)*
 
-**Group Members**: Eti Brihaspati Patel, Sonam Dwivedi, Hemangi Makwana, and Kesar Thakkar
+**Group Members**: Eti Brihaspati Patel
+                   Sonam Dwivedi
+                   Hemangi Makwana
+                   Kesar Thakkar
 
 ## Project overview
 
